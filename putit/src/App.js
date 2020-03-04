@@ -1,29 +1,18 @@
 import React from 'react';
 import './App.css';
-import NewComponent from './components/NewComponent';
+import PersonCard from './components/PersonCard';
 
 function App() {
   return (
     <div className="App">
-        <Header firstName="Bill" lastName="Justice" Age="45" hair="Brown" />
-        <NewComponent/>
-        <Header firstName="Smith" lastName="John" Age="88" hair="Brown" />
-        <NewComponent/>
+        <PersonCard firstName="Bill" lastName="Justice" age= {45}  hairColor="Brown" />
+        <PersonCard firstName="Smith" lastName="John" age={88} hairColor="Brown" />
+        <PersonCard firstName="Fillmore" lastName="Millard" age={50} hairColor="Brown" />
+        <PersonCard firstName="Smith" lastName="Maria" age={62} hairColor="Brown" />
+
+      
       </div>
   );
 }
 
 export default App;
-class Header extends React.Component {
-      render() {
-          const {firstName, lastName, Age, hair} = this.props;
-          return (
-              <div>
-                  <h1>  {lastName}, {firstName}</h1>
-                  <p>Age: {Age}</p>
-                  <p>Hair Color: {hair}</p>
-              </div>
-          );
-      }
-  }
-
